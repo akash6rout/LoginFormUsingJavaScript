@@ -1,0 +1,33 @@
+body{
+    background: url(./evenview.jpg)no-repeat;
+    background-size: cover;
+}   
+.loginbox{
+    width: 350px;
+    top:50%;
+    left:50%;
+    transform:translate(-50%,-80%);
+    position: absolute;
+}
+.loginbox h1{
+    float: unset;
+    font-size: 40px;
+    border-bottom: 6px  solid;
+    margin-bottom: 50px;
+    padding: 13px 0;
+}
+.textbox input{
+    background: none;
+}
+.textbox input{
+    width: 60%;
+    overflow: hidden;
+    font-size: 20px;
+    padding: 3px 0;
+    margin:5px 0;
+    border-top: none;
+    border-left: none;
+    border-right: none;
+    border-color: green;
+    border-radius: 10px;
+}

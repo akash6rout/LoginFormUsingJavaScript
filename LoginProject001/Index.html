@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>LOGIN FORM</title>
+    <link rel="Stylesheet" type="text/css" href="./Index.css">
+</head>
+<body>
+    <form action="Welcome.html" name="myform" method="GET">
+        <div class="loginbox">
+        <h1>LOGIN</h1>
+        <div class="textbox" id="name">
+            <p><b>ENTER YOUR NAME</b></p>
+            <input type="text" name="fname" id="txt1" onblur="funchklen(this.value.length,'txt1')" placeholder="Username">
+        </div>
+        <div class="textbox" id="pass">
+            <p><b>ENTER YOUR PASSWORD</b></p>
+            <input type="password" name="fpass" id="txt2" onblur="funchklen(this.value.length,'txt2')" placeholder="Password">
+        </div>
+        <br><br>
+        <div>
+            <input type="submit" value="LOGIN" class="btn">
+        </div>
+    </div>
+    </form>
+</body>
+<script>
+    function funchklen(len,cid){
+        if(len<6) {
+            document.getElementById(cid).style.borderColor="red"
+        }
+        else{
+            document.getElementById(cid).style.borderColor="green" 
+        }
+    }
+    document.querySelector("#txt1").onkeypress=function(txt1){
+
+        let ch=txt1.which;
+        
+        console.log(ch)
+
+        if(!(ch>=65 && ch<=90) || (ch>=97 && ch<=122) || (ch==132))
+        txt1.preventDefault();
+
+    };
+</script>
+
+</html>
